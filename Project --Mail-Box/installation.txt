@@ -1,0 +1,22 @@
+
+To solve pip problem
+sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall
+
+Flask is the web frame work of the python.
+Two frame work of python one is django which very high level and other is flask which is very easy to understand.
+We use SQLAlchemy to interact with database.
+We use Flask-Marshmallow.
+We use postman to check.
+
+install package to make environment:
+pip3 install pipenv
+
+
+TO activate enviroment:
+pipenv shell
+
+
+
+
+install packagestouch 
+pipenv install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy

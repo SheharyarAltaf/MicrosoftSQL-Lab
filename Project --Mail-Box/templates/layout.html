@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MailApp</title>
+        <script src="https://cdn.ckeditor.com/ckeditor5/12.1.0/classic/ckeditor.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+		<style>
+        body{
+            background-color: #D3D3D3;
+        }
+        input[type=text]{
+          width: 60%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+        }
+        .compose{
+            padding-top: 0px;
+            padding-right: 5px;
+            padding-bottom: 30px;
+            position: relative;
+        }
+        .sidebar{
+            padding-top: 20px;
+            margin-top: 20px;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            height: 85%;
+            border-right: 1px solid black;
+            
+        }
+        .inbox{
+            padding-top: 20px;
+            margin-top: 20px;
+            padding-left: 15px;
+            margin-left: 15px;
+            width: 70%;
+            height: 80%;
+        
+        }
+        .nav-email-subtitle {
+          font-size: 15px;
+          text-transform: uppercase;
+          color: #333;
+          margin-bottom: 15px;
+          margin-top: 30px;
+        }
+        .media-meta {
+            top: 0px;
+            font-size: 11px;
+            color: #999;
+            position: relative;
+            right: 10px;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        @media(hover: hover) {
+            .testField{
+                white-space: nowrap;
+                overflow: hidden;
+                overflow: ellipsis;
+                margin-top: 1px;
+                margin-bottom: 1px;
+
+            }
+            .testField:hover {
+                position: static;
+                border: 1px solid black;
+                border-radius: 4px;
+                background-color: #edf1f9;
+            }
+        }
+
+
+    </style>
+	</head>
+	<body>
+		{% include "includes/_sidebar.html" %}
+		<div class="container">
+		{% include 'includes/_messages.html' %}
+		{% include 'includes/_newMessage.html' %}
+		{% block body %}{% endblock %}
+			</div>
+		</div>
+		<!-- <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+ 	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		
+        <script type="text/javascript"> 
+            CKEDITOR.replace('inputBody');
+            var textarea = document.body.appendChild( document.createElement( 'textarea' ) );
+            CKEDITOR.replace( textarea );
+        </script>
+	</body>
+</html>

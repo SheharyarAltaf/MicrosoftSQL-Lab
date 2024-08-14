@@ -1,0 +1,39 @@
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header row">
+                    <button type="button" class="close col col-sm-2 pul-right" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title col col-sm-4 pul-right">New Message</h4>
+                </div>
+                <div class="modal-body">
+                  
+                    <form role="form" class="form-horizontal" action="" method="POST">
+                        <div class="form-group">
+                            <label class="col-sm-2" for="inputTo">To</label>
+                            <div class="col-sm-10"><input type="email" class="form-control" id="inputTo" name="email" placeholder="Recipients"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2" for="inputSubject">Subject</label>
+                            <div ><input type="text" class="form-control"
+                            class="col-sm-10" id="inputSubject" name="subject" placeholder="Your Subject"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 pul-left" for="inputBody">Message</label>
+                            <div class="col-sm-12"><textarea class="form-control" id="inputBody" name="inputBody" rows="14" ></textarea></div>
+                        </div>
+                    
+                  
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button> 
+                            <a href="/savingdraft" class="label label-warning span></span><span></span><span></span> pull-left" style="font-size: large;">Save Draft</a>
+                            <input type="submit" class="btn btn-primary " value="Send Mail">
+                        </div>
+                    </form>
+                </div>
+            </div>
+          
+        </div>
+    </div>
